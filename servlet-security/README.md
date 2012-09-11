@@ -1,6 +1,6 @@
 servlet-security:  Using Java EE Declarative Security to Control Access to Servlet 3
 ====================
-Author: Sherif F. Makary
+Author: Brian E. Lavender, Sherif F. Makary
 Level: Intermediate
 Technologies: Servlet, Security
 Summary: Demonstrates how to use Java EE declarative security to control access to Servlet 3
@@ -13,13 +13,14 @@ This example demonstrates the use of Java EE declarative security to control acc
 This quickstart takes the following steps to implement Servlet security:
 
 1. Define a security domain in the `standalone.xml` configuration file.
-2. Add an application user with access rights to the application.
+2. Create an ldap security domain with the name `example`.
 3. Add a security domain reference to `WEB-INF/jboss-web.xml`.
 4. Add a security constraint to the `WEB-INF/web.xml` .
 5. Add a security annotation to the EJB declaration.
 
 
 Please note the allowed user role `guest` in the annotation -`@RolesAllowed`- is the same as the user role defined in step 2
+
 
 
 System requirements
@@ -29,6 +30,9 @@ All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3
 
 The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
 
+Configure LDAP
+---------------
+If you have not done so, configure ApacheDS and the example security domain in JBoss. Instructions to come.
 
 Configure Maven
 ---------------
